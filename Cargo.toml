@@ -1,0 +1,29 @@
+[package]
+name = "binator_nom"
+authors = ["Stargateur"]
+version = "0.0.0"
+description = "binator nom adaptater"
+license = "Zlib"
+repository = "https://github.com/binator/nom"
+readme = "readme.md"
+keywords = ["parsing", "combinator", "ascii"]
+categories = ["parsing"]
+edition = "2021"
+
+include = [
+  "readme.md",
+  "license.md",
+  "Cargo.toml",
+  "rustfmt.toml",
+  "src/**/*.rs",
+]
+
+[dependencies]
+nom = '7'
+binator_core = "0.0.2"
+
+[dev-dependencies]
+binator_context = { git = "https://github.com/binator/context.git" }
+pretty_assertions = "1"
+derive-new = "0.5"
+derive_more = "0.99"
