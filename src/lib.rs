@@ -11,7 +11,7 @@ use core::{
   marker::PhantomData,
 };
 
-use binator_core::{
+use binator::{
   Contexting,
   Parse,
   Parsed,
@@ -109,11 +109,11 @@ where
 
 #[cfg(test)]
 mod tests {
-  use binator_context::{
-    First,
-    Keep,
-  };
-  use binator_core::{
+  use binator::{
+    context::{
+      First,
+      Keep,
+    },
     Contexting,
     Parse,
     Parsed,
@@ -136,7 +136,10 @@ mod tests {
     IResult,
   };
 
-  use crate::{Nom, NomAtom};
+  use crate::{
+    Nom,
+    NomAtom,
+  };
 
   #[derive(Display, Debug, PartialEq, From)]
   enum FromAtom {
